@@ -10,64 +10,52 @@
   <body>
     <header>
       <a href="/" class="logo"
-        ><img src="logo.png" alt="" /><span>SPENC<em>.net</em></span></a
+        ><div class="wrapper"><img src="logo.png" style="width: 5.5rem; top: -3rem; right: 0rem;" alt="" /></div>SPENC<em>.net</em></a
       >
       <a href="/" class="bloglink">Blog Post</a>
     </header>
     <main>
       <article class="h-entry">
         <header>
-          <div>
-            Title: <h1 class="p-name">
-              <a class="u-url" href="/title-of-the-blog"
-                >The Title of the Blog Post</a
+          <div class="date">
+            Date: <time class="dt-published" datetime="2024-10-01 12:00:00"
+              ><a><div class="wrapper"><img src="date.png" alt="Sept 5" style="width: 4rem; bottom: -1.1rem; left: 1.3rem;" /></div><small>, 2024</small></a></time
+            >
+          </div>
+          <div class="tags">
+            Tags:
+            <ul>
+              <li class="p-category"><a href="/tag1"><div class="wrapper"><img src="tag1.png" alt="Dungeon" style="width: 6rem; bottom: -1.4rem; left: 0.4rem;"/></div></a></li>
+              <li class="p-category"><a href="/tag2"><div class="wrapper"><img src="tag2.png" alt="Art" style="width: 4rem; bottom: -1.9rem; left: 0.2rem;" /></div></a></li>
+              <li aria-hidden="true"></li>
+              <li class="p-category"><a href="/tag3"><div class="wrapper"><img src="tag3.png" alt="Mystery" style="width: 5.5rem; bottom: -1.5rem; left: -0.2rem;"/></div></a></li>
+              <li aria-hidden="true"></li>
+              <li aria-hidden="true"></li>
+            </ul>
+          </div>
+          <div class="no">
+            No: <a href="/tag1"><div class="wrapper"><img src="no.png" alt="Sept 5" style="width: 2.8rem; bottom: -0.5rem; left: 0.2rem;"/></div></a>
+          </div>
+          <div class="by">
+            BY: <small>(Name, Organization, E-mail Address)</small>
+            <ul>
+              <li class="p-category"><address class="p-author h-card">
+                <a class="p-name u-url" href="blog/by/pauthor"
+                  ><div class="wrapper" style="width: 4rem;"><img src="by.png" alt="Spencer Fleming (mail@spenc.net)" style="width: 16rem; top: -1.5rem; left: -0.4rem;"/></div></a
+                ></address></li>
+                <li aria-hidden="true"></li>
+              <li aria-hidden="true"></li>
+              <li aria-hidden="true"></li>
+            </ul>
+          </div>
+          <div class="title">
+            <span>Title: </span><h1 class="p-name"><a class="u-url" href="/title-of-the-blog"
+                ><div class="wrapper" style="width: 100%"><img src="title.png" alt="A Dungeon Can Be a Home Cooked Meal" style="width: 100%; top: -8.3rem; left: 0;"/></div></a
               >
             </h1>
           </div>
-          <div class="meta">
-            <div>
-              <div>
-                Date: <time class="dt-published" datetime="2024-10-01 12:00:00"
-                  ><a>Oct 1<small>, 2024</small></a></time
-                >
-              </div>
-              <div class="tags">
-                Tags:
-                <ul>
-                  <li class="p-category"><a href="/tag1">Tag 1</a></li>
-                  <li class="p-category"><a href="/tag2">Tag 2</a></li>
-                  <li class="p-category"><a href="/tag3">Tag 3</a></li>
-                  <li class="p-category"><a href="/tag4">Tag 4</a></li>
-                  <li class="p-category"><a href="/tag5">Tag 5</a></li>
-                  <li class="p-category"><a href="/tag6">Tag 6</a></li>
-                </ul>
-              </div>
-            </div>
-            <div>
-              <div>
-                No: 001
-                </address>
-              </div>
-              <div>
-                BY: <small>(Name, Organization, E-mail Address)</small>
-                <ul>
-                  <li class="p-category"><address class="p-author h-card">
-                    <a class="p-name u-url" href="blog/by/pauthor"
-                      >Author 1</a
-                    ></li>
-                  <li class="p-category"><address class="p-author h-card">
-                    <a class="p-name u-url" href="blog/by/pauthor"
-                      >Author2</a
-                    ></li>
-                  <li aria-hidden="true"></li>
-                  <li aria-hidden="true"></li>
-                </ul>
-                </address>
-              </div>
-            </div>
-          </div>
         </header>
-        <div class="e-content">The article itself</div>
+        <div class="e-content main">The article itself</div>
       </article>
     </main>
   </body>
