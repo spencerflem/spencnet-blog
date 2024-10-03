@@ -12,24 +12,140 @@ body {
   min-height: 100%;
 }
 
+@media only screen and (min-width: 0em) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, auto) 22.5rem auto 1fr; /* TODO: 22.5 is WAK! */
+    grid-template-areas:
+      "logo"
+      "blog"
+      "no"
+      "date"
+      "by"
+      "tags"
+      "title"
+      "img"
+      "main"
+      "."
+  }
+  .logo img {
+    /* TODO: INLINE */
+    width: 3.3rem;
+    top: -2.5rem;
+    right: 0rem;
+  }
+}
 
+@media only screen and (min-width: 22em) {
+  body {
+    grid-template-columns: 2fr  1fr;
+    grid-template-rows: repeat(6, auto) 22.5rem auto 1fr; /* TODO: 22.5 is WAK! */
+    grid-template-areas:
+      "logo logo"
+      "blog blog"
+      "date no"
+      "by by"
+      "tags tags"
+      "title title"
+      "img img"
+      "main main"
+      ". ."
+  }
+  .tags > ul {
+    columns: 2;
+  }
+}
 
-
-body {
-  grid-template-columns: 2fr 1fr 2fr;
-  grid-template-rows: repeat(4, auto) 22.5rem auto 1fr;
-  grid-template-areas:
-    "blog  .     logo"
-    "date  .     no"
-    "tags  .     by"
-    "title .     by"
-    "img   img   img"
-    "main  main  main"
-    ".     .     .";
+@media only screen and (min-width: 25em) {
+  body {
+    grid-template-columns: 4fr 1fr 4fr;
+    grid-template-rows: repeat(6, auto) 22.5rem auto 1fr; /* TODO: 22.5 is WAK! */
+    grid-template-areas:
+      "no    logo  logo"
+      "date  date  blog"
+      "by    by    by"
+      "tags  tags  tags"
+      "title title title"
+      "img   img   img"
+      "main  main  main"
+      ".     .     ."
+  }
+  .logo img {
+    width: 3.3rem;
+    top: -2.5rem;
+    right: 0rem;
+  }
+  .logo {
+    justify-self: end;
+  }
+  .bloglink {
+    justify-self: end;
+  }
 }
 
 
+@media only screen and (min-width: 32em) {
+  body {
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: repeat(6, auto) 22.5rem auto 1fr; /* TODO: 22.5 is WAK! */
+    grid-template-areas:
+      "blog  logo"
+      "no    by"
+      "date  by"
+      "tags  tags"
+      "title title"
+      "img   img"
+      "main  main"
+      ".     ."
+  }
+  .by {
+    justify-self: end;
+  }
+  .bloglink {
+    justify-self: unset;
+  }
+}
 
+@media only screen and (min-width: 40em) {
+  body {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto) 22.5rem auto 1fr; /* TODO: 22.5 is WAK! */
+    grid-template-areas:
+      "blog  logo"
+      "date  no"
+      "tags  by"
+      "title by"
+      "img   img"
+      "main  main"
+      ".     .";
+  }
+  .by {
+    justify-self: unset;
+  }
+}
+
+@media only screen and (min-width: 50em) {
+  body {
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: repeat(4, auto) 22.5rem auto 1fr; /* TODO: 22.5 is WAK! */
+    grid-template-areas:
+      "blog  logo  logo"
+      "date  .     no"
+      "tags  .     by"
+      "title .     by"
+      "img   img   img"
+      "main  main  main"
+      ".     .     .";
+  }
+}
+
+@media only screen and (min-width: 56em) {
+  .logo img {
+    width: 5.5rem;
+    top: -3rem;
+    right: 0rem;
+  }
+}
 
 main,
 article,
@@ -69,7 +185,6 @@ article header li {
 .logo {
   grid-area: logo;
   align-self: center;
-  justify-self: end;
   color: inherit;
   text-decoration: none;
 }
@@ -86,9 +201,6 @@ article header li {
 }
 .tags {
   grid-area: tags;
-}
-.tags > ul {
-  columns: 2;
 }
 .title > span {
   grid-area: title;
